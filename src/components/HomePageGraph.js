@@ -51,6 +51,7 @@ const HomePageGraph = ( { data }) => {
                 marginVertical: 8,
                 borderRadius: 6
                 }}
+                segments={2}
             />
         </View>
     )
