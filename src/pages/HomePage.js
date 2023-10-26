@@ -50,7 +50,7 @@ const HomePage = ({ navigation, route }) => {
         <View style={homestyle.homeContainer}>
             {/* <Header /> */}
             <WelcomeCard navigation={navigation} username={username} />
-            <Text style={{alignSelf: 'center', fontSize: 20, padding: 10, color: 'white'}}>Log History</Text>
+            <Text style={{alignSelf: 'center', fontSize: 20, padding: 10, color: 'white'}}>Log History (Last 3 Entries):</Text>
             <SafeAreaView>
                 <FlatList 
                     data={recentLogs}

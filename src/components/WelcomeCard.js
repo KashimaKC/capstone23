@@ -7,27 +7,30 @@ const WelcomeCard = ( { navigation, username } ) => {
         <View style={cards.welcomeCard}>
             <Text style={cards.cardText}> Welcome, {username}! </Text>
             <View style={cards.welcomeCardNav}>
+
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                     <Pressable onPress={() => navigation.navigate("RecordEntry", { username: username })}
                         style={cards.navButton}
                     >
-                        <Ionicons name="medkit-outline" style={{color: 'white', fontSize: 15, marginRight: 10}}/>
+                        <Ionicons name="medkit-outline" style={{ fontSize: 15, marginRight: 10}}/>
                         <Text style={cards.navText}>Create a new log</Text>
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate("Logs", { username: username})}
                         style={cards.navButton}
                     >
-                        <Ionicons name="file-tray-full-outline" style={{color: 'white', fontSize: 15, marginRight: 10}}/>
+                        <Ionicons name="file-tray-full-outline" style={{fontSize: 15, marginRight: 10}}/>
                         <Text style={cards.navText}>View Logs</Text>
                     </Pressable>
                 </View>
+
                 <View>
                     <Pressable onPress={() => navigation.navigate('Settings')}
                         style={cards.settingsButton}
-                    >
-                        <Text style={cards.navText}>Settings</Text>
+                    >   
+                        <Text style={{alignSelf: 'center', color: 'white'}}>Settings</Text>
                     </Pressable>
                 </View>
+
             </View>
         </View>
     )

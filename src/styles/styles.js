@@ -38,7 +38,7 @@ const login = StyleSheet.create({
 const homestyle = StyleSheet.create({
     homeContainer : {
         display: 'flex',
-        backgroundColor: jet,
+        backgroundColor: byzantineblue,
         height: '100%',
         padding: 5
     },
@@ -49,10 +49,10 @@ const homestyle = StyleSheet.create({
 
 const cards = StyleSheet.create({
     welcomeCard : {
-        backgroundColor: byzantineblue,
+        backgroundColor: dukeblue,
         padding: 20,
         margin: 5,
-        marginTop: 25,
+        marginTop: 35,
         borderRadius: 5
     },
     cardText : {
@@ -66,7 +66,7 @@ const cards = StyleSheet.create({
     navButton : {
         display: 'flex',
         flexDirection: 'row',
-        backgroundColor: dukeblue,
+        backgroundColor: '#03fc90',
         padding: 10,
         margin: 2,
         width: 150,
@@ -74,14 +74,15 @@ const cards = StyleSheet.create({
         borderRadius: 5
     },
     navText : { 
-        color: textcolor,
+        color: 'black',
         alignSelf: 'center'
     },
     settingsButton : {
-        backgroundColor: dukeblue,
+        backgroundColor: jet,
         padding: 10,
         margin: 2,
-        borderRadius: 5
+        borderRadius: 5,
+        marginTop: 10
     }
 })
 
@@ -95,40 +96,43 @@ const logCard = StyleSheet.create({
 
 const recordEntry = StyleSheet.create({
     recordPageContainer : {
-        marginTop: 23,
+        marginTop: 0,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: byzantineblue,
-        padding: 5
+        padding: 5,
+        height: '100%'
     },
     title : {
-        fontSize: 20,
-        color: 'white'
+        fontSize: 24,
+        color: 'white',
+        marginBottom: 20
     },
-    ratingButton : { 
-        backgroundColor: 'black',
-        padding: 10, 
+    ratingButton : (pressed, color) => ({ 
+        backgroundColor: pressed ? 'black' : color,
+        padding: 15, 
         margin: 5,
         width: 50,
         borderRadius: 8
-    },
+    }),
     ratingButtonText : {
-        color: 'white', 
+        color: 'black', 
         textAlign: 'center'
     },
     descriptionArea : { 
         backgroundColor: powderblue,
         height: 150,
-        width: 350,
         borderRadius: 2,
         padding: 10
     },
-    logSubmissionButton : {
-        backgroundColor: jet,
+    logSubmissionButton : ( color ) => ({
+        display: 'flex',
+        backgroundColor: color,
         borderRadius: 6,
         padding: 15,
-    }
+        flexDirection: 'row'
+    })
 })
 
 export {
