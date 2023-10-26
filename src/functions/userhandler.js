@@ -15,6 +15,7 @@ export const loginUser = async ( username, password ) => {
 
 
 // makes a call to the API to gather the amount of records for each day to populate the graph.
+// might need to rewrite this since the logic does not seem to be functioning correctly at this point.
 export const getRecordCount = async ( username, password ) => {
     const response = await fetch(`http://192.168.1.228:5000/graphdata?username=${username}`,
         { method: 'GET' }

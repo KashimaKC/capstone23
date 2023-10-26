@@ -11,7 +11,7 @@ const login = StyleSheet.create({
         display: 'flex',
         alignContent: 'center',
         alignItems: 'center',
-        marginTop: 30
+        marginTop: 100
     },
     textFieldContainer : {
         backgroundColor: byzantineblue,
@@ -50,35 +50,37 @@ const homestyle = StyleSheet.create({
 const cards = StyleSheet.create({
     welcomeCard : {
         backgroundColor: byzantineblue,
-        display: 'flex',
-        width: '100%',
-        height: 200,
-        borderRadius: 6,
+        padding: 20,
+        margin: 10,
+        marginTop: 30
     },
     cardText : {
         color: textcolor,
         alignSelf: 'center',
-        marginTop: 'auto',
-        marginBottom: 'auto',
-        fontSize: 18
+        fontSize: 22
     },
     welcomeCardNav : {
-        backgroundColor: textcolor,
-        height: 140,
-        margin: 5,
-        display: 'flex',
-        borderRadius: 6,
-        flexDirection: 'column',
-        justifyContent: 'space-around'
+        marginTop: 15
     },
     navButton : {
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        display: 'flex',
+        flexDirection: 'row',
         backgroundColor: dukeblue,
-        color: 'white',
-        padding: 12,
-        borderRadius: 6,
-        width: '99%'
+        padding: 10,
+        margin: 2,
+        width: 150,
+        flexWrap: "nowrap",
+        borderRadius: 5
+    },
+    navText : { 
+        color: textcolor,
+        alignSelf: 'center'
+    },
+    settingsButton : {
+        backgroundColor: dukeblue,
+        padding: 10,
+        margin: 2,
+        borderRadius: 5
     }
 })
 

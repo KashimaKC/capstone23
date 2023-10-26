@@ -4,6 +4,7 @@ import HomePage from './src/pages/HomePage';
 import SettingsPage from './src/pages/SettingsPage';
 import LoginPage from './src/pages/LoginPage';
 import RecordEntry from './src/pages/RecordEntry';
+import Logs from './src/pages/Logs';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -34,6 +35,11 @@ const App = () => {
         <NavStack.Screen
           name="Home"
           component={HomePage}
+        ></NavStack.Screen>
+
+        <NavStack.Screen
+          name="Logs"
+          component={Logs}
         ></NavStack.Screen>
 
         <NavStack.Screen

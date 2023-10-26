@@ -1,10 +1,8 @@
 import { Text, View, Dimensions } from 'react-native'
 import { useEffect, useState } from 'react';
 
-import Header from '../components/Header'
 import WelcomeCard from '../components/WelcomeCard';
 import HomePageGraph from '../components/HomePageGraph';
-import { LineChart } from "react-native-chart-kit"
 import { getRecordCount } from '../functions/userhandler';
 
 import { homestyle } from '../styles/styles';
@@ -37,9 +35,9 @@ const HomePage = ({ navigation, route }) => {
 
     return (
         <View style={homestyle.homeContainer}>
-            <Header />
+            {/* <Header /> */}
             <WelcomeCard navigation={navigation} username={username} />
-            <Text>Default graph length is seven days. Please visit the settings to change.</Text>
+            <Text style={{alignSelf: 'center', fontSize: 20, padding: 10, color: 'white'}}>Log History</Text>
             <HomePageGraph data={data} />
         </View>
     )

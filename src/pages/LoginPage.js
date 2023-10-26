@@ -14,6 +14,7 @@ const LoginPage = ( { navigation } ) => {
             console.log(response)
             if (response === 403) {
                 console.log("invalid username or password")
+                Alert.alert('Invalid username.')
             } else {
                 navigation.navigate('Home', { username: username })
             }
