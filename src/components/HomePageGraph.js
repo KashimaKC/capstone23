@@ -3,29 +3,38 @@ import { LineChart } from "react-native-chart-kit"
 
 
 const HomePageGraph = ( { data }) => {
+
+    let keys = []
+    let count = []
+
+    for (let x in data) {
+        keys.push(x)
+        count.push(data[x])
+    }
+
     return (
         <View>
             <LineChart
                 data={{
                 labels: [
-                    `${data[0].month}/${data[0].day}`, 
-                    `${data[1].month}/${data[1].day}`, 
-                    `${data[2].month}/${data[2].day}`, 
-                    `${data[3].month}/${data[3].day}`, 
-                    `${data[4].month}/${data[4].day}`, 
-                    `${data[5].month}/${data[5].day}`, 
-                    `${data[6].month}/${data[6].day}`
+                    keys[0],
+                    keys[1],
+                    keys[2],
+                    keys[3],
+                    keys[4],
+                    keys[5],
+                    keys[6],
                 ],
                 datasets: [
                     {
                         data: [
-                            data[0].records,
-                            data[1].records,
-                            data[2].records,
-                            data[3].records,
-                            data[4].records,
-                            data[5].records,
-                            data[6].records,
+                            count[0],
+                            count[1],
+                            count[2],
+                            count[3],
+                            count[4],
+                            count[5],
+                            count[6],
                         ]
                     }
                 ]

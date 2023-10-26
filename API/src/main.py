@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import pymongo, json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
@@ -78,7 +78,25 @@ def get_graph_data():
     try:
         documents = col.find({"username": username})
         for item in documents:
-            return jsonify(item['records'])
+            records = item['records']
+
+            # note current date for json object
+            today = datetime.now()
+
+            # initializes counts for last 7 dates for graph
+            dateobj = {}
+            for i in range(7):
+                date = today + timedelta(days=-i)
+                dateobj.update({date.strftime('%m-%d'): 0})
+
+            for log in records:
+                record_date = datetime.fromtimestamp(log['time']).strftime('%m-%d')
+                
+                if record_date in dateobj:
+                    dateobj[record_date] = dateobj[record_date] + 1
+
+            return dateobj
+        
     except Exception as e:
         print(e)
         return "exception"

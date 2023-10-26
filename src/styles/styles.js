@@ -51,8 +51,9 @@ const cards = StyleSheet.create({
     welcomeCard : {
         backgroundColor: byzantineblue,
         padding: 20,
-        margin: 10,
-        marginTop: 30
+        margin: 5,
+        marginTop: 25,
+        borderRadius: 5
     },
     cardText : {
         color: textcolor,
@@ -60,7 +61,7 @@ const cards = StyleSheet.create({
         fontSize: 22
     },
     welcomeCardNav : {
-        marginTop: 15
+        marginTop: 30
     },
     navButton : {
         display: 'flex',
@@ -81,6 +82,14 @@ const cards = StyleSheet.create({
         padding: 10,
         margin: 2,
         borderRadius: 5
+    }
+})
+
+const logCard = StyleSheet.create({
+    cardContainer : {
+        backgroundColor: powderblue,
+        margin: 5,
+        padding: 10
     }
 })
 
@@ -123,5 +132,6 @@ const recordEntry = StyleSheet.create({
 })
 
 export {
-    homestyle, cards, login, recordEntry
+    homestyle, cards, login, recordEntry,
+    logCard
 }
