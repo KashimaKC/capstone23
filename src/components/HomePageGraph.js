@@ -27,7 +27,7 @@ const HomePageGraph = ( { data }) => {
     }
 
     return (
-        <View>
+        <View style={{marginTop: 10}}>
             <LineChart
                 data={{
                     labels: [

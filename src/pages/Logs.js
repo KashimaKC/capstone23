@@ -33,7 +33,7 @@ const Logs = ({ navigation, route }) => {
                 >   
                     <View style={{flexDirection: 'row'}}>
                         <Ionicons name="caret-back-outline" style={{fontSize: 22, color: 'white', marginRight: 10}}/>
-                        <Text style={{color: 'white', alignSelf: 'center'}}>Back</Text>
+                        <Text style={{color: 'white', alignSelf: 'center', fontSize: 18}}>Back</Text>
                     </View>
                 </Pressable>
                 <Text style={{color: 'white', fontSize: 22, alignSelf: 'center', marginRight: 15}}>Log View</Text>

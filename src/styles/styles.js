@@ -58,7 +58,7 @@ const logpage = StyleSheet.create({
         backgroundColor: dukeblue,
         width: 120,
         padding: 10
-    }
+    },
 })
 
 const cards = StyleSheet.create({
@@ -105,8 +105,35 @@ const logCard = StyleSheet.create({
     cardContainer : {
         backgroundColor: powderblue,
         margin: 5,
-        padding: 10
-    }
+        padding: 10,
+    },
+    cardNav : {
+        marginTop: 0,
+        flexGrow: 1
+    },
+    card : (color) => ({
+        margin: 2,
+        padding: 8,
+        backgroundColor: color == 'remove' ? 'red' : byzantineblue,
+        borderRadius: 4,
+        flexGrow: 1
+    }),
+    cardText : {
+        fontSize: 16
+    },
+    ratingBar : (color) => ({
+        height: 5,
+        marginBottom: 10,
+        backgroundColor: 
+            color == 5 ? '#e04526' : 
+            color == 4 ? '#fa7e48' :
+            color == 3 ? '#ffb234' :
+            color == 2 ? '#ffd934' :
+            color == 1 ? '#add633' :
+            color == 0 ? '#a0c15a' :
+            dukeblue,
+        borderRadius: 8
+    })
 })
 
 const recordEntry = StyleSheet.create({
