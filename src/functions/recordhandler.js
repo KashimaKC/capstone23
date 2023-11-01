@@ -15,3 +15,10 @@ export const retrieveRecords = async ( username ) => {
 
     return json
 }
+
+export const removeRecord = async (username, time) => {
+    const response = await fetch(`http://192.168.1.228:5000/deleterecord?username=${username}&time=${time}`,
+        { method: 'POST'}
+    )
+    console.log(response.status)
+}

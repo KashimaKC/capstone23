@@ -47,12 +47,26 @@ const homestyle = StyleSheet.create({
     }
 })
 
+const logpage = StyleSheet.create({
+    headerNav : {
+        backgroundColor: byzantineblue,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    headerBack : {
+        backgroundColor: dukeblue,
+        width: 120,
+        padding: 10
+    }
+})
+
 const cards = StyleSheet.create({
     welcomeCard : {
         backgroundColor: dukeblue,
         padding: 20,
         margin: 5,
-        marginTop: 35,
+        marginTop: 45,
         borderRadius: 5
     },
     cardText : {
@@ -63,16 +77,17 @@ const cards = StyleSheet.create({
     welcomeCardNav : {
         marginTop: 30
     },
-    navButton : {
+    navButton : (color) => ({
         display: 'flex',
         flexDirection: 'row',
-        backgroundColor: '#03fc90',
+        backgroundColor: color == 'create' ? '#03fc90' : powderblue,
         padding: 10,
         margin: 2,
-        width: 150,
+        width: 'auto',
         flexWrap: "nowrap",
-        borderRadius: 5
-    },
+        borderRadius: 5,
+        flexGrow: 1
+    }),
     navText : { 
         color: 'black',
         alignSelf: 'center'
@@ -137,5 +152,5 @@ const recordEntry = StyleSheet.create({
 
 export {
     homestyle, cards, login, recordEntry,
-    logCard
+    logCard, logpage
 }

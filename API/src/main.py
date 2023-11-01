@@ -126,5 +126,33 @@ def create_record():
     except Exception as e:
         return "Failed to create document", 500, {}
 
+@app.post("/deleterecord")
+def remove_record():
+    username = request.args.get('username')
+    time = request.args.get('time')
+    database = initializeConnection()
+    col = database["Users"]
+
+    try: 
+
+        query = {
+            "username": username,
+        }
+
+        update = {
+            "$pull": {
+                "records" : {
+                    "time": float(time)
+                }
+            }
+        }
+
+        result = col.update_one(query, update)
+        modified = result.modified_count
+        return modified
+            
+    except Exception as e:
+        print(e)
+        return "Exception"
 
 app.run(host='192.168.1.228')

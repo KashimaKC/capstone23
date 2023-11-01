@@ -10,13 +10,13 @@ const WelcomeCard = ( { navigation, username } ) => {
 
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                     <Pressable onPress={() => navigation.navigate("RecordEntry", { username: username })}
-                        style={cards.navButton}
+                        style={cards.navButton('create')}
                     >
                         <Ionicons name="medkit-outline" style={{ fontSize: 15, marginRight: 10}}/>
                         <Text style={cards.navText}>Create a new log</Text>
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate("Logs", { username: username})}
-                        style={cards.navButton}
+                        style={cards.navButton('view')}
                     >
                         <Ionicons name="file-tray-full-outline" style={{fontSize: 15, marginRight: 10}}/>
                         <Text style={cards.navText}>View Logs</Text>
