@@ -24,7 +24,7 @@ const WelcomeCard = ( { navigation, username } ) => {
                 </View>
 
                 <View>
-                    <Pressable onPress={() => navigation.navigate('Settings')}
+                    <Pressable onPress={() => navigation.navigate('Settings', { username: username})}
                         style={cards.settingsButton}
                     >   
                         <Text style={{alignSelf: 'center', color: 'white'}}>Settings</Text>

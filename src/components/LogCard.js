@@ -7,10 +7,26 @@ const LogCard = ( { item, navigation, username } ) => {
 
     var date = new Date(item.time * 1000)
 
+    const promptDelete = ( time ) => {
+        Alert.alert(
+            'Remove Record?', 
+            'Are you sure you would like to remove this record? This action cannot be undone.',
+            [
+                {
+                    text: 'Cancel',
+                    onPress: () => console.log('Cancelled')
+                },
+                {
+                    text: 'Delete',
+                    onPress: () => deleteRecord(time)
+                }
+            ]
+        )
+    }
 
     const deleteRecord = ( time ) => {
-        Alert.alert("removed the record!")
         removeRecord(username, time)
+        Alert.alert("Removed the record!")
         navigation.navigate("Logs", { username: username})
     }
 
@@ -25,7 +41,7 @@ const LogCard = ( { item, navigation, username } ) => {
                 </View>
                 <View style={logCard.cardNav}>
                     <Pressable
-                        onPress={() => deleteRecord(item.time)}
+                        onPress={() => promptDelete(item.time)}
                         style={[logCard.card('remove')]}
                     >
                         <Text style={{fontSize: 16, color: 'white'}}>Remove</Text>

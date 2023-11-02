@@ -30,7 +30,7 @@ const RecordEntry = ( { navigation, route } ) => {
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={recordEntry.recordPageContainer}>
-                <View style={{marginTop: '50%'}}>
+                <View style={{marginTop: '25%'}}>
                     <Text style={recordEntry.title}>Create New Record</Text>
 
                     <Text style={{color: 'white', fontSize: 18}}>Select Pain Level:</Text>

@@ -90,7 +90,7 @@ const cards = StyleSheet.create({
     }),
     navText : { 
         color: 'black',
-        alignSelf: 'center'
+        alignSelf: 'center',
     },
     settingsButton : {
         backgroundColor: jet,
@@ -136,6 +136,23 @@ const logCard = StyleSheet.create({
     })
 })
 
+const settings = StyleSheet.create({
+    settingsPage:{
+        backgroundColor: dukeblue,
+        marginTop: 50
+    },
+    settingsContainer: {
+        backgroundColor: byzantineblue,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    settingsNav: {
+        backgroundColor: byzantineblue,
+        flexGrow: 1
+    }
+})
+
 const recordEntry = StyleSheet.create({
     recordPageContainer : {
         marginTop: 0,
@@ -179,5 +196,5 @@ const recordEntry = StyleSheet.create({
 
 export {
     homestyle, cards, login, recordEntry,
-    logCard, logpage
+    logCard, logpage, settings
 }

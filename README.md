@@ -1,5 +1,19 @@
 # MEDLOG Capstone Project 23
 
+## Current Progress:
+- Added full CRUD functionality for creating records and removing them from the app.
+- Updated all of the pages with a fancy new UI.
+- Fixed logic with regards to the home page graph.
+- Added lots of functionality to the API. There is a new endpoint now to remove records which is: `/deleterecord`
+- Switched to iOS for testing and design since I wanted to try something new. All testing has been happening on my iPhone 15 Pro Max.
+
+### New User Interface:
+The new UI has been designed to look brighter and more interesting to the eye. Color codes for pain have been added to help users in determining the severity levels.
+
+<img src="documentation/updated_ui_images/home_preview_updated.jpeg" width="250">
+<img src="documentation/updated_ui_images/log_page_updated.jpeg" width="250">
+<img src="documentation/updated_ui_images/record_preview_updated.jpeg" width="250">
+
 ## Progress Point 1: 
 
 - General layout and structuring of infrastrcture and application. 
