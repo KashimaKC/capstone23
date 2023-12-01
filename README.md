@@ -1,6 +1,9 @@
 # MEDLOG Capstone Project 23
 
-## Current Progress:
+<img src="documentation/capstone_poster_jmaraun_prelim.png" >
+
+
+## Progress Point 3:
 - Added full CRUD functionality for creating records and removing them from the app.
 - Updated all of the pages with a fancy new UI.
 - Fixed logic with regards to the home page graph.
